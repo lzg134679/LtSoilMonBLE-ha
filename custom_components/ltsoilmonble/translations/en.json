@@ -1,0 +1,35 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Add LtSoilMonBLE",
+        "description": "Please select the LtSoilMonBLE Bluetooth device to add"
+      },
+      "device_selection": {
+        "title": "Select Device",
+        "description": "{count} new LtSoilMonBLE devices discovered, please select one to add",
+        "data": {
+          "device": "Device"
+        }
+      }
+    },
+    "error": {
+      "no_devices_found": "No devices found, please ensure devices are powered on and within Bluetooth range"
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "LtSoilMonBLE Settings",
+        "description": "Configure device options",
+        "data": {
+          "name": "Device Name"
+        }
+      }
+    }
+  }
+}

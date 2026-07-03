@@ -1,0 +1,2 @@
+DOMAIN = "ltsoilmonble"
+SERVICE_UUID = "000077f0-0000-1000-8000-00805f9b34fb"

@@ -1,0 +1,35 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "添加 LtSoilMonBLE",
+        "description": "请选择要添加的LtSoilMonBLE蓝牙设备"
+      },
+      "device_selection": {
+        "title": "选择设备",
+        "description": "已发现{count}个新的LtSoilMonBLE设备，请选择一个添加",
+        "data": {
+          "device": "设备"
+        }
+      }
+    },
+    "error": {
+      "no_devices_found": "未发现新设备，请确保设备已开机并在蓝牙范围内"
+    },
+    "abort": {
+      "already_configured": "设备已配置"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "LtSoilMonBLE 设置",
+        "description": "配置设备选项",
+        "data": {
+          "name": "设备名称"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "domain": "ltsoilmonble",
+  "name": "LtSoilMonBLE",
+  "codeowners": ["@lzg134679"],
+  "config_flow": true,
+  "dependencies": ["bluetooth"],
+  "after_dependencies": ["bluetooth"],
+  "documentation": "https://github.com/lzg134679/LtSoilMonBLE-ha",
+  "issue_tracker": "https://github.com/lzg134679/LtSoilMonBLE-ha/issues",
+  "iot_class": "local_push",
+  "version": "1.0.0"
+}
