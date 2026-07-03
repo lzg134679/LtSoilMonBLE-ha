@@ -23,6 +23,10 @@
 
 ### 方法一：通过 HACS（推荐）
 
+[![在 Home Assistant 中打开 HACS 添加仓库](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=lzg134679&repository=LtSoilMonBLE-ha&category=integration)
+
+或者手动添加：
+
 1. 确保已安装 [HACS](https://hacs.xyz/)
 2. 打开 HACS → 右上角三个点 → Custom repositories
 3. 添加仓库地址：`https://github.com/lzg134679/LtSoilMonBLE-ha`，类别选择 `Integration`
@@ -36,6 +40,10 @@
 3. 重启 Home Assistant
 
 ## 配置方法
+
+[![在 Home Assistant 中配置集成](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=ltsoilmonble)
+
+或者手动配置：
 
 1. 在 Home Assistant 中，进入 **设置** → **设备与服务** → **添加集成**
 2. 搜索 **LtSoilMonBLE** 并选择
