@@ -30,17 +30,33 @@ jobs:
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Extract changelog
+        id: changelog
+        run: |
+          VERSION="${{ steps.version.outputs.VERSION }}"
+          if [ -f CHANGELOG.md ]; then
+            CHANGELOG=$(awk -v ver="\\[$VERSION\\]" '
+              /^## / {
+                if (printing) exit
+                if ($2 == ver) printing=1
+                next
+              }
+              printing { print }
+            ' CHANGELOG.md | sed '/^$/d')
+            echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGELOG" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "CHANGELOG=See commit history for details" >> $GITHUB_OUTPUT
+          fi
+
       - name: Create Release
         if: steps.tag_exists.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: "v${{ steps.version.outputs.VERSION }}"
           name: "v${{ steps.version.outputs.VERSION }}"
-          body: |
-            LtSoilMonBLE v${{ steps.version.outputs.VERSION }}
-            
-            Changes:
-            - See commit history for details
+          body: ${{ steps.changelog.outputs.CHANGELOG }}
           draft: false
           prerelease: false
         env:
