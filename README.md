@@ -23,7 +23,7 @@
 
 ### 方法一：通过 HACS（推荐）
 
-[![在 Home Assistant 中打开 HACS 添加仓库](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=lzg134679&repository=LtSoilMonBLE-ha&category=integration)
+[![在 Home Assistant 中打开 HACS 添加仓库](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=lzg134679&repository=LtSoilMonBLE-ha&category=Integration)
 
 或者手动添加：
 
